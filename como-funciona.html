@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CacaoScan | Cómo Funciona</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf17",
+              "primary-dark": "#12a812",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112111",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-slate-100 font-display text-slate-800">
+    <!-- NAVBAR (MISMO ESTILO QUE LAS OTRAS PÁGINAS) -->
+    <nav
+      class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold"
+            >
+              C
+            </div>
+            <span class="font-bold text-xl">
+              Cacao<span class="text-primary">Scan</span>
+            </span>
+          </a>
+
+          <!-- Desktop Menu -->
+          <div
+            class="hidden lg:flex items-center space-x-8 text-sm font-medium"
+          >
+            <!-- Activo -->
+            <a
+              href="index.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Inicio
+            </a>
+
+            <a
+              href="como-funciona.html"
+              class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"
+            >
+              Cómo Funciona
+            </a>
+
+            <a
+              href="app-demo.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Demo App
+            </a>
+
+            <a
+              href="tecnologia.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Tecnología
+            </a>
+
+            <a
+              href="modelo-negocio.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Modelo de Negocio
+            </a>
+
+            <a
+              href="impacto.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Impacto y ODS
+            </a>
+          </div>
+
+          <!-- Botones -->
+          <div class="hidden lg:flex items-center gap-4">
+            <a
+              href="contacto.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Contacto
+            </a>
+
+            <a
+              href="contacto.html"
+              class="bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5"
+            >
+              Empezar Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+      <!-- TITULO PRINCIPAL (SIN FONDO ESPECIAL) -->
+      <section class="max-w-4xl mx-auto text-center px-6 mb-20">
+        <h1 class="text-4xl font-extrabold mb-6">
+          ¿Cómo Funciona <span class="text-primary">CacaoScan</span>?
+        </h1>
+        <p class="text-lg text-slate-600">
+          CacaoScan combina visión computacional, análisis colorimétrico
+          avanzado y datos de peso integrados mediante IoT para detectar
+          tempranamente enfermedades como la moniliasis.
+        </p>
+      </section>
+
+      <!-- PROCESO EN TARJETAS -->
+      <section
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10"
+      >
+        <!-- Paso 1 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl"
+              >photo_camera</span
+            >
+          </div>
+          <h2 class="text-xl font-bold mb-3">Captura de Imagen</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            El agricultor captura la mazorca con la cámara del teléfono. La
+            aplicación normaliza condiciones de luz para un análisis estable.
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl">palette</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">Colorimetría CIELAB</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Se transforma la imagen al espacio CIELAB para identificar
+            variaciones en tono y luminancia asociadas a madurez o infección.
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl">texture</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">Análisis de Textura</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Se evalúan patrones superficiales y brillo para detectar
+            alteraciones que el ojo humano no percibe fácilmente.
+          </p>
+        </div>
+
+        <!-- Paso 4 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl">scale</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">Integración con Peso</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            La balanza electrónica transmite el peso por Bluetooth. Este dato
+            complementa el análisis visual.
+          </p>
+        </div>
+
+        <!-- Paso 5 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl">psychology</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">Clasificación IA</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            El modelo entrenado con datos locales clasifica la mazorca con alta
+            precisión.
+          </p>
+        </div>
+
+        <!-- Paso 6 -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition"
+        >
+          <div
+            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="material-icons text-primary text-3xl">verified</span>
+          </div>
+          <h2 class="text-xl font-bold mb-3">Reporte Inmediato</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            El sistema entrega diagnóstico instantáneo: Sana, Posible Infección
+            o No Apta para comercialización.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-background-dark text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-6 h-6 bg-primary rounded flex items-center justify-center text-white text-xs font-bold"
+          >
+            C
+          </div>
+          <span class="font-semibold">CacaoScan</span>
+        </div>
+
+        <p class="text-sm opacity-70">© 2026 Proyecto Universitario AgTech</p>
+      </div>
+    </footer>
+  </body>
+</html>

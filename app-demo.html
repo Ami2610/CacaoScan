@@ -1,153 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CacaoScan | Demo App</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CacaoScan | Demo Interactiva</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: "#17cf17",
-        primaryDark: "#12a812"
-      },
-      fontFamily: {
-        display: ["Manrope", "sans-serif"]
-      }
-    }
-  }
-}
-</script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf17",
+              primaryDark: "#12a812",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
 
-</head>
-
-<body class="bg-slate-100 font-display">
-
-<!-- NAVBAR -->
-<nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-6">
+  <body class="bg-slate-100 font-display">
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold"
+            >
+              C
+            </div>
+            <span class="font-bold text-xl">
+              Cacao<span class="text-primary">Scan</span>
+            </span>
+          </a>
 
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold">
-                    C
-                </div>
-                <span class="font-bold text-xl">
-                    Cacao<span class="text-primary">Scan</span>
-                </span>
+          <!-- Desktop Menu -->
+          <div
+            class="hidden lg:flex items-center space-x-8 text-sm font-medium"
+          >
+            <!-- Activo -->
+            <a
+              href="index.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Inicio
             </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+            <a
+              href="como-funciona.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Cómo Funciona
+            </a>
 
-                <!-- Activo -->
-                <a href="index.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Inicio
-                </a>
+            <a
+              href="app-demo.html"
+              class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"
+            >
+              Demo App
+            </a>
 
-                <a href="como-funciona.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Cómo Funciona
-                </a>
+            <a
+              href="tecnologia.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Tecnología
+            </a>
 
-                <a href="app-demo.html"
-                   class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full">
-                    Demo App
-                </a>
-                
-                <a href="tecnologia.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Tecnología
-                </a>
+            <a
+              href="modelo-negocio.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Modelo de Negocio
+            </a>
 
-                <a href="modelo-negocio.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Modelo de Negocio
-                </a>
+            <a
+              href="impacto.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Impacto y ODS
+            </a>
+          </div>
 
-                <a href="impacto.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Impacto y ODS
-                </a>
-            </div>
+          <!-- Botones -->
+          <div class="hidden lg:flex items-center gap-4">
+            <a
+              href="contacto.html"
+              class="text-slate-600 hover:text-primary transition"
+            >
+              Contacto
+            </a>
 
-            <!-- Botones -->
-            <div class="hidden lg:flex items-center gap-4">
-                <a href="contacto.html"
-                   class="text-slate-600 hover:text-primary transition">
-                    Contacto
-                </a>
-
-                <a href="contacto.html"
-                   class="bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5">
-                    Empezar Demo
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<main class="pt-32 flex justify-center items-center min-h-screen">
-
-<!-- TELEFONO -->
-<div class="w-[320px] h-[640px] bg-black rounded-[40px] p-4 shadow-2xl relative">
-
-  <!-- PANTALLA -->
-  <div class="bg-white w-full h-full rounded-[30px] overflow-hidden relative">
-
-    <!-- HEADER APP -->
-    <div class="bg-primary text-white text-center py-4 font-bold">
-      CacaoScan
-    </div>
-
-    <!-- IMAGEN ANALISIS -->
-    <div class="relative h-64 bg-gray-900">
-
-      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa31t0Nsbceduh7vACa85knt7YG-bYmh9_VKH9ymV8IL-E8KVV7Ts7Z43RpZqqS5QrcgNmYmOW_vhqbOKYa4Wn18XRFB6O6RKZQGvedxygFGPyf-_Hpr4C_6lKKiMbDrOhWEdqPKTtP4wjo3XGBi8ZalebVw-P-mBVUTo_y8ut4p9hmdXGfLrGapdU44mzhOnnyd0NuJzyXZolVxFdXPhdix2V_TdWbYxaptoMSLfxCmqT9q3YLwz4BHWJBOvYS6tjU34XA-rO2Qrm"
-           class="absolute inset-0 w-full h-full object-cover">
-
-      <!-- Bounding Box -->
-      <div class="absolute top-[30%] left-[25%] w-24 h-32 border-4 border-green-400 rounded-lg">
-        <div class="absolute -top-6 left-0 bg-green-400 text-black text-xs font-bold px-2 py-1">
-          94% Sana
+            <a
+              href="contacto.html"
+              class="bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5"
+            >
+              Empezar Demo
+            </a>
+          </div>
         </div>
       </div>
+    </nav>
 
-    </div>
+    <main class="pt-32 flex justify-center items-center min-h-screen">
+      <div class="w-[320px] h-[640px] bg-black rounded-[40px] p-4 shadow-2xl">
+        <div
+          class="bg-white w-full h-full rounded-[30px] overflow-hidden relative"
+        >
+          <!-- SPLASH -->
+          <div
+            id="splash"
+            class="screen flex flex-col justify-center items-center h-full bg-primary text-white"
+          >
+            <h1 class="text-2xl font-bold">CacaoScan</h1>
+            <p class="mt-4 animate-pulse">Cargando...</p>
+          </div>
 
-    <!-- RESULTADO -->
-    <div class="p-6 text-center">
+          <!-- LOGIN -->
+          <div id="login" class="screen hidden p-6">
+            <h2 class="text-lg font-bold mb-6 text-center">Iniciar Sesión</h2>
+            <input
+              type="email"
+              placeholder="Correo"
+              class="w-full border p-2 rounded mb-3"
+            />
+            <input
+              type="password"
+              placeholder="Contraseña"
+              class="w-full border p-2 rounded mb-4"
+            />
+            <button
+              onclick="goTo('dashboard')"
+              class="w-full bg-primary text-white py-2 rounded"
+            >
+              Ingresar
+            </button>
+          </div>
 
-      <h2 class="text-lg font-bold mb-4">Resultado del Análisis</h2>
+          <!-- DASHBOARD -->
+          <div id="dashboard" class="screen hidden p-6">
+            <h2 class="text-lg font-bold mb-4">Dashboard</h2>
+            <button
+              onclick="goTo('capture')"
+              class="w-full bg-primary text-white py-2 rounded mb-4"
+            >
+              Nuevo Escaneo
+            </button>
+            <div class="text-sm text-slate-600">
+              <p><strong>Análisis realizados:</strong> 24</p>
+              <p><strong>Precisión promedio:</strong> 97%</p>
+            </div>
+          </div>
 
-      <div class="bg-green-100 text-green-700 font-bold py-3 rounded-lg mb-4">
-        Mazorca en Buen Estado
+          <!-- CAPTURA -->
+          <div id="capture" class="screen hidden">
+            <div class="bg-primary text-white text-center py-3 font-bold">
+              Capturar Mazorca
+            </div>
+            <div
+              class="h-64 bg-gray-900 flex items-center justify-center text-white"
+            >
+              Imagen Cámara
+            </div>
+            <div class="p-6">
+              <button
+                onclick="analyze()"
+                class="w-full bg-primary text-white py-2 rounded"
+              >
+                Analizar
+              </button>
+            </div>
+          </div>
+
+          <!-- ANALIZANDO -->
+          <div
+            id="analyzing"
+            class="screen hidden flex flex-col justify-center items-center h-full"
+          >
+            <div
+              class="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"
+            ></div>
+            <p class="mt-4">Procesando con IA...</p>
+          </div>
+
+          <!-- RESULTADO -->
+          <div id="result" class="screen hidden p-6 text-center">
+            <h2 class="text-lg font-bold mb-4">Resultado</h2>
+            <div id="resultBox" class="py-3 rounded mb-4 font-bold"></div>
+            <button
+              onclick="goTo('dashboard')"
+              class="w-full bg-primary text-white py-2 rounded"
+            >
+              Volver al Dashboard
+            </button>
+          </div>
+        </div>
       </div>
+    </main>
 
-      <div class="text-sm text-slate-600 space-y-2">
-        <p><strong>Índice de Madurez:</strong> 0.92</p>
-        <p><strong>Peso:</strong> 450g</p>
-        <p><strong>Riesgo Moniliasis:</strong> 2%</p>
-      </div>
+    <script>
+      function goTo(screenId) {
+        document
+          .querySelectorAll(".screen")
+          .forEach((s) => s.classList.add("hidden"));
+        document.getElementById(screenId).classList.remove("hidden");
+      }
 
-      <button class="mt-6 bg-primary text-white px-6 py-2 rounded-lg font-semibold">
-        Guardar Resultado
-      </button>
+      function analyze() {
+        goTo("analyzing");
 
-    </div>
+        setTimeout(() => {
+          const random = Math.random();
+          let box = document.getElementById("resultBox");
 
-  </div>
+          if (random < 0.6) {
+            box.className =
+              "bg-green-100 text-green-700 py-3 rounded mb-4 font-bold";
+            box.innerText = "Mazorca Sana (Riesgo 3%)";
+          } else {
+            box.className =
+              "bg-red-100 text-red-700 py-3 rounded mb-4 font-bold";
+            box.innerText = "Posible Monilla (Riesgo 72%)";
+          }
 
-</div>
+          goTo("result");
+        }, 2000);
+      }
 
-</main>
-
-</body>
+      setTimeout(() => {
+        goTo("login");
+      }, 2000);
+    </script>
+  </body>
 </html>
