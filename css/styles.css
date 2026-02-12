@@ -1,0 +1,87 @@
+/* ================================
+   CACAO SCAN - GLOBAL STYLES
+   Proyecto Universitario AgTech
+================================ */
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   SCROLLBAR PERSONALIZADA
+================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ================================
+   ANIMACIONES PERSONALIZADAS
+================================ */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ================================
+   NAVBAR EXTRA EFFECT (opcional)
+================================ */
+
+.nav-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ================================
+   BOTÓN HOVER SUAVE (opcional)
+================================ */
+
+.btn-hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(23, 207, 23, 0.25);
+}
+
+/* ================================
+   TRANSICIONES GENERALES
+================================ */
+
+.transition-smooth {
+    transition: all 0.3s ease-in-out;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer-dark {
+    background-color: #112111;
+}

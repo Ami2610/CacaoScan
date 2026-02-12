@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CacaoScan | Inicio</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#17cf17",
+                        "primary-dark": "#12a812",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112111",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light text-slate-800 font-display antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold">
+                    C
+                </div>
+                <span class="font-bold text-xl">
+                    Cacao<span class="text-primary">Scan</span>
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+
+                <!-- Activo -->
+                <a href="index.html"
+                   class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full">
+                    Inicio
+                </a>
+
+                <a href="como-funciona.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Cómo Funciona
+                </a>
+
+                <a href="app-demo.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Demo App
+                </a>
+                
+                <a href="tecnologia.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Tecnología
+                </a>
+
+                <a href="modelo-negocio.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Modelo de Negocio
+                </a>
+
+                <a href="impacto.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Impacto y ODS
+                </a>
+            </div>
+
+            <!-- Botones -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="contacto.html"
+                   class="text-slate-600 hover:text-primary transition">
+                    Contacto
+                </a>
+
+                <a href="contacto.html"
+                   class="bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5">
+                    Empezar Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<main class="pt-32">
+
+<section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Texto -->
+        <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
+                Tecnología AgTech Innovadora
+            </span>
+
+            <h1 class="mt-6 text-5xl lg:text-6xl font-extrabold leading-tight">
+                Inteligencia Artificial para la
+                <span class="text-primary">Calidad del Cacao</span>
+            </h1>
+
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                Optimiza tu cosecha, garantiza la calidad y reduce desperdicios con tecnología de escaneo avanzada. Llevamos el laboratorio al campo.
+            </p>
+
+            <div class="mt-8 flex gap-4">
+                <a href="como-funciona.html"
+                   class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-lg shadow-lg shadow-primary/20 transition transform hover:-translate-y-1">
+                    <span class="material-icons text-sm">play_circle_filled</span>
+                    Ver Demo
+                </a>
+
+                <a href="tecnologia.html"
+                   class="flex items-center gap-2 border border-slate-300 hover:border-primary text-slate-700 font-semibold py-3 px-8 rounded-lg transition">
+                    <span class="material-icons text-sm">description</span>
+                    Leer Más
+                </a>
+            </div>
+
+            <div class="mt-10 flex gap-8 text-sm text-slate-500">
+                <div class="flex items-center gap-2">
+                    <span class="material-icons text-primary">check_circle</span>
+                    Análisis en tiempo real
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-icons text-primary">check_circle</span>
+                    98% de Precisión
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen con efecto IA -->
+        <div class="relative lg:h-[600px] flex items-center justify-center">
+
+            <div class="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
+
+                <!-- Imagen -->
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5gfbfXMqfZhWU45acF3ifJ7E6pq04mLVgvTQoKPcI8GXk3AMrnhXu2oaV2fB7YafjGiMh6LzaiUJUHlUkephFYD7OaZNS3bH6NaGtpP9hu9V_uQD0_2EKgPSalAwcLFI3yMEirwz-6O2Fkhr9sb_Ya1uvl2vsTQ7kF1qG2kfEVgp5q4Y-nPMxlbIBCx-kwutC-0U4RP5WLQQczdjm3ric-4jlAusS6wp5wheNre9Va48Ub4cFz11QpNEFISCQtNp-0_RJ8bAHllNn"
+                    alt="Mazorca de cacao"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <!-- Overlay oscuro -->
+                <div class="absolute inset-0 bg-slate-900/20 pointer-events-none"></div>
+
+                <!-- Escáner -->
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-64 border-2 border-primary/70 rounded-lg animate-pulse shadow-[0_0_20px_rgba(23,207,23,0.5)] flex flex-col justify-between p-2">
+
+                    <div class="flex justify-between">
+                        <div class="w-4 h-4 border-l-2 border-t-2 border-white"></div>
+                        <div class="w-4 h-4 border-r-2 border-t-2 border-white"></div>
+                    </div>
+
+                    <div class="w-full h-0.5 bg-primary/80 shadow-[0_0_10px_#17cf17] animate-float"></div>
+
+                    <div class="flex justify-between">
+                        <div class="w-4 h-4 border-l-2 border-b-2 border-white"></div>
+                        <div class="w-4 h-4 border-r-2 border-b-2 border-white"></div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Madurez -->
+                <div class="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-3 rounded-lg shadow-lg border border-white/20 animate-float">
+
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-full">
+                            <span class="material-icons text-primary text-sm">analytics</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Madurez</p>
+                            <p class="text-sm font-bold text-slate-800">Óptima (92%)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Peso -->
+                <div class="absolute bottom-10 left-10 bg-white/90 backdrop-blur-md p-3 rounded-lg shadow-lg border border-white/20 animate-float">
+
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 bg-primary/10 rounded-full">
+                            <span class="material-icons text-primary text-sm">scale</span>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">Peso Est.</p>
+                            <p class="text-sm font-bold text-slate-800">450g</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+            </div>
+        </section>
+
+<!-- ================= PROCESO ================= -->
+<section class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <span class="text-primary font-semibold uppercase tracking-wider text-sm">
+            Flujo de Trabajo
+        </span>
+
+        <h2 class="mt-3 text-4xl font-extrabold">
+            El Proceso <span class="text-primary">CacaoScan</span>
+        </h2>
+
+        <p class="mt-4 text-lg text-slate-500">
+            Una metodología simple de cuatro pasos diseñada para agrónomos y productores.
+        </p>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="p-6 rounded-2xl bg-background-light shadow-sm">
+                <span class="material-icons text-primary text-3xl">photo_camera</span>
+                <h3 class="mt-4 font-bold text-lg">Captura</h3>
+                <p class="text-sm text-slate-500 mt-2">
+                    Toma una foto directamente en el campo.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-background-light shadow-sm">
+                <span class="material-icons text-primary text-3xl">fitness_center</span>
+                <h3 class="mt-4 font-bold text-lg">Peso</h3>
+                <p class="text-sm text-slate-500 mt-2">
+                    Ingresa el peso manual o con báscula inteligente.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-background-light shadow-sm">
+                <span class="material-icons text-primary text-3xl">psychology</span>
+                <h3 class="mt-4 font-bold text-lg">Análisis IA</h3>
+                <p class="text-sm text-slate-500 mt-2">
+                    Evaluación automática por visión artificial.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-background-light shadow-sm">
+                <span class="material-icons text-primary text-3xl">verified</span>
+                <h3 class="mt-4 font-bold text-lg">Resultados</h3>
+                <p class="text-sm text-slate-500 mt-2">
+                    Clasificación y recomendación inmediata.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-background-dark text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-6 h-6 bg-primary rounded flex items-center justify-center text-white text-xs font-bold">
+                C
+            </div>
+            <span class="font-semibold">CacaoScan</span>
+        </div>
+
+        <p class="text-sm opacity-70">
+            © 2026 Proyecto Universitario AgTech
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
