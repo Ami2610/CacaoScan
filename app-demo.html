@@ -6,6 +6,7 @@
     <title>CacaoScan | Demo Interactiva</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
@@ -26,6 +27,33 @@
         },
       };
     </script>
+
+    <style>
+      .screen {
+        transition: opacity 0.3s ease;
+      }
+      .scan-line {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #17cf17;
+        animation: scan 2s linear infinite;
+        box-shadow: 0 0 12px #17cf17;
+      }
+
+      @keyframes scan {
+        0% {
+          top: 0%;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+    </style>
   </head>
 
   <body class="bg-slate-100 font-display">
@@ -51,62 +79,49 @@
           <div
             class="hidden lg:flex items-center space-x-8 text-sm font-medium"
           >
-            <!-- Activo -->
             <a
               href="index.html"
               class="text-slate-600 hover:text-primary transition"
+              >Inicio</a
             >
-              Inicio
-            </a>
-
             <a
               href="como-funciona.html"
               class="text-slate-600 hover:text-primary transition"
+              >Cómo Funciona</a
             >
-              Cómo Funciona
-            </a>
-
             <a
               href="app-demo.html"
               class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"
             >
               Demo App
             </a>
-
             <a
               href="tecnologia.html"
               class="text-slate-600 hover:text-primary transition"
+              >Tecnología</a
             >
-              Tecnología
-            </a>
-
             <a
               href="modelo-negocio.html"
               class="text-slate-600 hover:text-primary transition"
+              >Modelo de Negocio</a
             >
-              Modelo de Negocio
-            </a>
-
             <a
               href="impacto.html"
               class="text-slate-600 hover:text-primary transition"
+              >Impacto y ODS</a
             >
-              Impacto y ODS
-            </a>
           </div>
 
-          <!-- Botones -->
+          <!-- Botón -->
           <div class="hidden lg:flex items-center gap-4">
             <a
               href="contacto.html"
               class="text-slate-600 hover:text-primary transition"
+              >Contacto</a
             >
-              Contacto
-            </a>
-
             <a
-              href="contacto.html"
-              class="bg-primary hover:bg-primary-dark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5"
+              href="app-demo.html"
+              class="bg-primary hover:bg-primaryDark text-white text-sm font-semibold py-2.5 px-6 rounded-full shadow-lg shadow-primary/25 transition transform hover:-translate-y-0.5"
             >
               Empezar Demo
             </a>
@@ -115,10 +130,19 @@
       </div>
     </nav>
 
+    <!-- ================= APP SIMULADA ================= -->
     <main class="pt-32 flex justify-center items-center min-h-screen">
-      <div class="w-[320px] h-[640px] bg-black rounded-[40px] p-4 shadow-2xl">
+      <!-- Teléfono -->
+      <div
+        class="w-[340px] h-[680px] bg-gradient-to-b from-gray-900 to-black rounded-[50px] p-3 shadow-[0_20px_60px_rgba(0,0,0,0.4)] relative"
+      >
+        <!-- Notch -->
         <div
-          class="bg-white w-full h-full rounded-[30px] overflow-hidden relative"
+          class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full"
+        ></div>
+
+        <div
+          class="bg-white w-full h-full rounded-[40px] overflow-hidden relative"
         >
           <!-- SPLASH -->
           <div
@@ -126,59 +150,71 @@
             class="screen flex flex-col justify-center items-center h-full bg-primary text-white"
           >
             <h1 class="text-2xl font-bold">CacaoScan</h1>
-            <p class="mt-4 animate-pulse">Cargando...</p>
+            <p class="mt-4 animate-pulse">Cargando IA...</p>
           </div>
 
           <!-- LOGIN -->
-          <div id="login" class="screen hidden p-6">
+          <div id="login" class="screen hidden p-6 opacity-0">
             <h2 class="text-lg font-bold mb-6 text-center">Iniciar Sesión</h2>
+
             <input
               type="email"
               placeholder="Correo"
               class="w-full border p-2 rounded mb-3"
             />
+
             <input
               type="password"
               placeholder="Contraseña"
               class="w-full border p-2 rounded mb-4"
             />
+
             <button
               onclick="goTo('dashboard')"
-              class="w-full bg-primary text-white py-2 rounded"
+              class="w-full bg-primary hover:bg-primaryDark text-white py-2 rounded-lg shadow-md transition"
             >
               Ingresar
             </button>
           </div>
 
           <!-- DASHBOARD -->
-          <div id="dashboard" class="screen hidden p-6">
-            <h2 class="text-lg font-bold mb-4">Dashboard</h2>
+          <div id="dashboard" class="screen hidden p-6 opacity-0">
+            <h2 class="text-lg font-bold mb-6 text-center">Bienvenido 👋</h2>
+
+            <div class="bg-primary/10 p-4 rounded-xl mb-4">
+              <p class="text-sm text-slate-600">Análisis realizados</p>
+              <p class="text-2xl font-bold text-primary">24</p>
+            </div>
+
+            <div class="bg-green-100 p-4 rounded-xl mb-6">
+              <p class="text-sm text-slate-600">Precisión promedio</p>
+              <p class="text-2xl font-bold text-green-600">97%</p>
+            </div>
+
             <button
               onclick="goTo('capture')"
-              class="w-full bg-primary text-white py-2 rounded mb-4"
+              class="w-full bg-primary hover:bg-primaryDark text-white py-3 rounded-xl font-semibold shadow-lg transition transform hover:-translate-y-1"
             >
               Nuevo Escaneo
             </button>
-            <div class="text-sm text-slate-600">
-              <p><strong>Análisis realizados:</strong> 24</p>
-              <p><strong>Precisión promedio:</strong> 97%</p>
-            </div>
           </div>
 
           <!-- CAPTURA -->
-          <div id="capture" class="screen hidden">
+          <div id="capture" class="screen hidden opacity-0">
             <div class="bg-primary text-white text-center py-3 font-bold">
               Capturar Mazorca
             </div>
+
             <div
               class="h-64 bg-gray-900 flex items-center justify-center text-white"
             >
-              Imagen Cámara
+              Simulación Cámara
             </div>
+
             <div class="p-6">
               <button
                 onclick="analyze()"
-                class="w-full bg-primary text-white py-2 rounded"
+                class="w-full bg-primary hover:bg-primaryDark text-white py-2 rounded-lg shadow-md transition"
               >
                 Analizar
               </button>
@@ -188,21 +224,26 @@
           <!-- ANALIZANDO -->
           <div
             id="analyzing"
-            class="screen hidden flex flex-col justify-center items-center h-full"
+            class="screen hidden flex flex-col justify-center items-center h-full opacity-0"
           >
             <div
               class="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"
             ></div>
-            <p class="mt-4">Procesando con IA...</p>
+            <p class="mt-4 font-semibold">Procesando con IA...</p>
           </div>
 
           <!-- RESULTADO -->
-          <div id="result" class="screen hidden p-6 text-center">
-            <h2 class="text-lg font-bold mb-4">Resultado</h2>
-            <div id="resultBox" class="py-3 rounded mb-4 font-bold"></div>
+          <div id="result" class="screen hidden p-6 text-center opacity-0">
+            <h2 class="text-lg font-bold mb-4">Resultado del Análisis</h2>
+
+            <div
+              id="resultBox"
+              class="py-4 rounded-xl mb-4 font-bold text-sm leading-relaxed"
+            ></div>
+
             <button
               onclick="goTo('dashboard')"
-              class="w-full bg-primary text-white py-2 rounded"
+              class="w-full bg-primary hover:bg-primaryDark text-white py-2 rounded-lg shadow-md transition"
             >
               Volver al Dashboard
             </button>
@@ -213,10 +254,16 @@
 
     <script>
       function goTo(screenId) {
-        document
-          .querySelectorAll(".screen")
-          .forEach((s) => s.classList.add("hidden"));
-        document.getElementById(screenId).classList.remove("hidden");
+        document.querySelectorAll(".screen").forEach((s) => {
+          s.classList.add("opacity-0");
+          setTimeout(() => s.classList.add("hidden"), 300);
+        });
+
+        setTimeout(() => {
+          const target = document.getElementById(screenId);
+          target.classList.remove("hidden");
+          setTimeout(() => target.classList.remove("opacity-0"), 10);
+        }, 300);
       }
 
       function analyze() {
@@ -226,14 +273,16 @@
           const random = Math.random();
           let box = document.getElementById("resultBox");
 
-          if (random < 0.6) {
+          if (random < 0.7) {
             box.className =
-              "bg-green-100 text-green-700 py-3 rounded mb-4 font-bold";
-            box.innerText = "Mazorca Sana (Riesgo 3%)";
+              "bg-green-100 text-green-700 py-4 rounded-xl mb-4 font-bold";
+            box.innerText =
+              "✔ Mazorca Sana\nÍndice de Madurez: 92%\nApta para Comercialización";
           } else {
             box.className =
-              "bg-red-100 text-red-700 py-3 rounded mb-4 font-bold";
-            box.innerText = "Posible Monilla (Riesgo 72%)";
+              "bg-red-100 text-red-700 py-4 rounded-xl mb-4 font-bold";
+            box.innerText =
+              "⚠ Posible Monilla Detectada\nRiesgo: 72%\nRevisar Lote";
           }
 
           goTo("result");

@@ -87,3 +87,21 @@ html {
 .footer-dark {
   background-color: #112111;
 }
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #17cf17;
+  animation: scan 2s linear infinite;
+  box-shadow: 0 0 12px #17cf17;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
