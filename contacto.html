@@ -108,8 +108,8 @@
             </a>
           </div>
 
+          <!-- Desktop Buttons -->
           <div class="hidden lg:flex items-center gap-4">
-            <!-- ACTIVA -->
             <a
               href="contacto.html"
               class="text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full"
@@ -124,6 +124,63 @@
               Empezar Demo
             </a>
           </div>
+
+          <!-- Mobile Hamburger -->
+          <button
+            onclick="toggleMenu()"
+            class="lg:hidden text-slate-700 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-white border-t border-slate-200 shadow-md"
+      >
+        <div class="flex flex-col space-y-4 p-6 text-sm font-medium">
+          <a href="index.html" class="text-slate-700 hover:text-primary"
+            >Inicio</a
+          >
+          <a href="como-funciona.html" class="text-slate-700 hover:text-primary"
+            >Cómo Funciona</a
+          >
+          <a href="app-demo.html" class="text-slate-700 hover:text-primary"
+            >Demo App</a
+          >
+          <a href="tecnologia.html" class="text-slate-700 hover:text-primary"
+            >Tecnología</a
+          >
+          <a
+            href="modelo-negocio.html"
+            class="text-slate-700 hover:text-primary"
+            >Modelo de Negocio</a
+          >
+          <a href="impacto.html" class="text-slate-700 hover:text-primary"
+            >Impacto y ODS</a
+          >
+
+          <a
+            href="app-demo.html"
+            class="bg-primary text-white py-2 rounded-lg text-center font-semibold"
+          >
+            Empezar Demo
+          </a>
         </div>
       </div>
     </nav>
@@ -223,4 +280,10 @@
       </div>
     </footer>
   </body>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
 </html>
